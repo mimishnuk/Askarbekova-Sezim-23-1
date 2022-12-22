@@ -9,5 +9,6 @@ urlpatterns = [
     path('movies/<int:id>/', movie_detail_view),
     path('reviews/', reviews_view),
     path('reviews/<int:id>/', review_detail_view),
+    path('movies/reviews/', review_movies_view),
 
 ]
