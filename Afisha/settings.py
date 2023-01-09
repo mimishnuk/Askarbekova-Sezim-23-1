@@ -30,8 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 CREATED_APPS = [
-    'movie_app',
-    'rest_framework'
+    'movie_app.apps.MovieAppConfig',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'users'
 ]
 
 INSTALLED_APPS = [
@@ -43,6 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
 ] + CREATED_APPS
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication'
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
