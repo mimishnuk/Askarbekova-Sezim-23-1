@@ -1,6 +1,4 @@
-from django.shortcuts import render
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+
 from movie_app.models import *
 from movie_app.serializers import *
 from rest_framework import status
